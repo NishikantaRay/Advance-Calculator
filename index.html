@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="index.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Math Solver</title>
+  </head>
+  <body>
+      <!-- navbar starts -->
+        <nav class="navbar navbar-expand-lg navbar-mainbg">
+            <a class="navbar-brand navbar-logo" href="#">Math Solver</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home"><i class="fas fa-home"></i>Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#playground"><i class="fas fa-briefcase"></i>Play ground</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inst"><i class="fas fa-chalkboard-teacher"></i>Instruction</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class="fas fa-phone-square"></i>Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#footer"><i class="far fa-chart-bar"></i>Footer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/aunyks/newton-api"><i class="far fa-copy"></i>Documents</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- header -->
+        <section class="showcase" id="home">
+            <video src="img/jumbo.mp4" muted loop autoplay></video>
+            <div class="overlay"></div>
+            <div class="text">
+              <h3>A really micro micro-service for advanced math.</h3> 
+              <p>Newton does anything from numerical calculation to symbolic math parsing.</p>
+              <a href="#playground">Explore</a>
+            </div>
+          </section>
+          <br>
+          <!-- form-group -->
+        <div class="container" id="playground" >
+            <div class="form-group">
+                <label for="operation" id="titile_name">Enter your Operation</label>
+                <input type="text" name="input_name" placeholder=" Simplify	..." value="" id="input_ope" class="form-control" placeholder="" aria-describedby="helpId">
+                <label for="expression" id="titile_name">Enter your Expression</label>
+                <input type="text" placeholder="2^2+2(2)" name="input_name" value="" id="input" class="form-control" placeholder="" aria-describedby="helpId">
+            </div>
+            <div class="form-group text-center">
+                <button id="calc_btn" type="button" onclick="input_area()" class="btn ">Calculate</button>
+            </div>
+            <div class="form-group">
+                <textarea name="output_name" id="output" cols="155" rows="7"></textarea>
+            </div>
+        </div>
+        <!-- instruction -->
+        <div class="main-tag text-center" id="inst">
+            <h3 id="instr">Instruction</h4>
+        </div>
+        <div class="container">
+            <div class="row " id="card-ins" >
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Simplify</h4>
+                            <p class="card-text">Operation=simplify</p>
+                            <p class="card-text">Expression=2^2+2(2) </p>
+                            <p class="card-text">Ans=8</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title"> Factor</h4>
+                            <p class="card-text">Operation=factor</p>
+                            <p class="card-text">Expression=x^2 + 2x</p>
+                            <p class="card-text">Ans=x (x + 2)</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Derivation</h4>
+                            <p class="card-text">Operation=derive</p>
+                            <p class="card-text">Expression=x^2+2x</p>
+                            <p class="card-text">Ans=2 x + 2</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Integrate</h4>
+                            <p class="card-text">Operation=integrate</p>
+                            <p class="card-text">Expression=x^2+2x</p>
+                            <p class="card-text">Ans=1/3 x^3 + x^2 + C</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row"  id="card-ins">
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title"> Find 0's</h4>
+                            <p class="card-text">Operation=zeroes</p>
+                            <p class="card-text">Expression=x^2+2x</p>
+                            <p class="card-text">Ans=[-2, 0]</p>
+                        </div>
+                    </div> 
+                    <br>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title"> Find Tangent</h4>
+                            <p class="card-text">Operation=tangent</p>
+                            <p class="card-text">Expression=2lx^3</p>
+                            <p class="card-text">Ans=12 x + -16</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        
+                        <div class="card-body">
+                            <h4 class="card-title">Area Under Curve</h4>
+                            <p class="card-text">Operation=area</p>
+                            <p class="card-text">Expression=2:4lx^3</p>
+                            <p class="card-text">Ans=60</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        
+                        <div class="card-body">
+                            <h4 class="card-title">Cosine</h4>
+                            <p class="card-text">Operation=cos</p>
+                            <p class="card-text">Expression=pi</p>
+                            <p class="card-text">Ans=-1</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row"  id="card-ins">
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        
+                        <div class="card-body">
+                            <h4 class="card-title"> Sine</h4>
+                            <p class="card-text">Operation=sin</p>
+                            <p class="card-text">Expression=0</p>
+                            <p class="card-text">Ans=0</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title"> Tangent</h4>
+                            <p class="card-text">Operation=tan</p>
+                            <p class="card-text">Expression=0</p>
+                            <p class="card-text">Ans=0</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Inverse Cosine</h4>
+                            <p class="card-text">Operation=arccos</p>
+                            <p class="card-text">Expression=1</p>
+                            <p class="card-text">Ans=0</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Inverse Sine</h4>
+                            <p class="card-text">Operation=arcsin</p>
+                            <p class="card-text">Expression=0</p>
+                            <p class="card-text">Ans=0</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row"  id="card-ins">
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        
+                        <div class="card-body">
+                            <h4 class="card-title">Inverse Tangent</h4>
+                            <p class="card-text">Operation=arctan</p>
+                            <p class="card-text">Expression=0</p>
+                            <p class="card-text">Ans=0</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Absolute Value</h4>
+                            <p class="card-text">Operation=abs</p>
+                            <p class="card-text">Expression=-1</p>
+                            <p class="card-text">Ans=1</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-3 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">Logarithm</h4>
+                            <p class="card-text">Operation=log</p>
+                            <p class="card-text">Expression=2l8</p>
+                            <p class="card-text">Ans=3</p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-3 col-12"></div>
+            </div>
+        </div>
+        <br>
+        <!-- keep in mind -->
+        <div class="card text-center keep_in" id="keep">
+            <div class="card-header">
+            Featured
+            </div>
+            <div class="card-body">
+            <h5 class="card-title">Keep in mind:</h5>
+            <p class="card-text"> To find the tangent line of a function at a certain x value, send the request as c|f(x) where c is the given x value and f(x) is the function expression, the separator is a vertical bar '|'. See the table above for an example request.
+
+               <br> To find the area under a function, send the request as c:d|f(x) where c is the starting x value, d is the ending x value, and f(x) is the function under which you want the curve between the two x values.
+                
+               <br> To compute fractions, enter expressions as numerator(over)denominator. For example, to process 2/4 you must send in your expression as 2(over)4. The result expression will be in standard math notation (1/2, 3/4).</p>
+            
+            </div>
+            <div class="card-header">
+                Featured
+            </div>
+        </div>
+        <br><br>
+        <section id="contact">
+            <div class="container" >
+                <section class="resume-section p-4 p-lg-5 text-center cont" id="contact">
+                    <div class="my-auto">
+                    <h2 class="mb-4" id="instr">Contact Us</h2>
+                    <ul class="fa-ul mb-4 ml-0">
+                        <li id="mail-address">
+            <!--               Replace with your email address -->
+                            <i class="fas fa-envelope-open mr-2 contact-icons"></i>youremail@mail.com</a>
+                        </li>
+                        <li>
+                        <i class="fas fa-mobile-alt mr-2 contact-icons"></i>+48 888 888
+                        </li>
+                        <li>
+                        <i class="fas fa-map-marker-alt mr-2 contact-icons"></i>Athens, GR
+                        </li>
+                    </ul>
+                    <p>
+                        ...or leave your message below and I will be back to you as soon as
+                        possible.
+                    </p>
+            
+                    <form class="contact-form d-flex flex-column align-items-center"action="https://formspree.io/youremail@mail.com"method="POST">
+                        <div class="form-group w-75">
+                        <input type="name"class="form-control"placeholder="Name"name="name"required/>
+                        </div>
+                        <div class="form-group w-75">
+                        <input type="email" class="form-control" placeholder="Email" name="name" required />
+                        </div>
+                        <div class="form-group w-75">
+                        <textarea id="feedback" class="form-control" type="text" placeholder="Message" rows="7" name="name" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit btn-info w-75">Submit</button>
+                    </form>
+                    </div>
+                </section>
+            <script
+                defer
+                src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+                integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+                crossorigin="anonymous"
+                ></script>
+            </div>
+        </section>
+        <br><br>
+        <!-- Site footer -->
+        <footer class="site-footer " id="footer">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>About</h6>
+                        <p class="text-justify ">Math Solver<i> TO BE SIMPLE </i>
+                            This program is free software: you can redistribute it and/or modify
+                            it under the terms of the GNU General Public License as published by
+                            the Free Software Foundation, either version 3 of the License, or
+                            (at your option) any later version.
+                        </p>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Categories</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">C</a></li>
+                            <li><a href="#">UI Design</a></li>
+                            <li><a href="#">PHP</a></li>
+                            <li><a href="#">Java</a></li>
+                            <li><a href="#">Android</a></li>
+                            <li><a href="#">Templates</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Contribute</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
+                        <a href="#">Newton</a>.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="social-icons">
+                            <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
+                            <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a></li>
+                            <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>   
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer ends here -->
+        <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <!-- Index.js -->
+        <script src="index.js"></script>
+  </body>
+</html>
+
+
+
+
+<!--     
+    // Simplify	/simplify/2^2+2(2)	8
+    // Factor	/factor/x^2 + 2x	x (x + 2)
+    // Derive	/derive/x^2+2x	2 x + 2
+    // Integrate	/integrate/x^2+2x	1/3 x^3 + x^2 + C
+    // Find 0's	/zeroes/x^2+2x	[-2, 0]
+    // Find Tangent	/tangent/2lx^3	12 x + -16
+    // Area Under Curve	/area/2:4lx^3	60
+    // Cosine	/cos/pi	-1
+    // Sine	/sin/0	0
+    // Tangent	/tan/0	0
+    // Inverse Cosine	/arccos/1	0
+    // Inverse Sine	/arcsin/0	0
+    // Inverse Tangent	/arctan/0	0
+    // Absolute Value	/abs/-1	1
+    // Logarithm	/log/2l8	3 -->
